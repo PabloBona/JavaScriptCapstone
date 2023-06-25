@@ -1,0 +1,27 @@
+{
+  "name": "javascriptcapstone",
+  "version": "1.0.0",
+  "description": "JavaScriptCapstone",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --verbose",
+    "lint": "npx hint . && npx stylelint \"**/*.{css,scss}\" && npx eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5",
+    "hint": "^7.1.9",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
