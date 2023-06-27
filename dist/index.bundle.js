@@ -125,7 +125,7 @@ eval("module.exports = __webpack_require__.p + \"2fbd6f3bb94616a18f45.svg\";\n\n
   \**********************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/logo.svg */ \"./src/img/logo.svg\");\n\n\n\n// add logo to the header\ndocument.getElementById('logoWebpage').setAttribute('src', _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\n\n//# sourceURL=webpack://javascriptcapstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/logo.svg */ \"./src/img/logo.svg\");\n\n\n\n// add logo to the header\ndocument.getElementById('logoWebpage').setAttribute('src', _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\ndocument.getElementById('logoWebpage-footer').setAttribute('src', _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\n\n//# sourceURL=webpack://javascriptcapstone/./src/index.js?");
 
 /***/ })
 
