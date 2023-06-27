@@ -125,7 +125,27 @@ eval("module.exports = __webpack_require__.p + \"2fbd6f3bb94616a18f45.svg\";\n\n
   \**********************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/logo.svg */ \"./src/img/logo.svg\");\n\n\n\n// add logo to the header\ndocument.getElementById('logoWebpage').setAttribute('src', _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\ndocument.getElementById('logoWebpage-footer').setAttribute('src', _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\n\n//# sourceURL=webpack://javascriptcapstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/logo.svg */ \"./src/img/logo.svg\");\n/* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/api.js */ \"./src/modules/api.js\");\n/* harmony import */ var _modules_renderShows_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/renderShows.js */ \"./src/modules/renderShows.js\");\n\n\n\n\n\n// add logo to the header\ndocument.getElementById('logoWebpage').setAttribute('src', _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\ndocument.getElementById('logoWebpage-footer').setAttribute('src', _img_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\nconst errorMessage = document.getElementById('error-message');\nwindow.addEventListener('DOMContentLoaded', async () => {\n  try {\n    const response = await (0,_modules_api_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n    if (!response.ok) {\n      throw new Error('Failed to fetch Series');\n    }\n    const shows = await response.json();\n    (0,_modules_renderShows_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(shows);\n  } catch (error) {\n    errorMessage.textContent = error.message;\n  }\n});\n\n//# sourceURL=webpack://javascriptcapstone/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/api.js":
+/*!****************************!*\
+  !*** ./src/modules/api.js ***!
+  \****************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst showApiBaseUrl = 'https://api.tvmaze.com';\nconst getShows = () => fetch(`${showApiBaseUrl}/shows`);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getShows);\n\n//# sourceURL=webpack://javascriptcapstone/./src/modules/api.js?");
+
+/***/ }),
+
+/***/ "./src/modules/renderShows.js":
+/*!************************************!*\
+  !*** ./src/modules/renderShows.js ***!
+  \************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst renderShows = (shows, limit = 12) => {\n  const showContainer = document.getElementById('shows');\n  let showList = '';\n  const limitedShows = shows.slice(0, limit);\n  limitedShows.forEach(show => {\n    showList += `\n    <div class=\"col-12 col-sm-6 col-md-4 col-lg-3 gx-3 gy-4\">\n      <div class=\"card\">\n        <img src=\"${show.image.medium}\" class=\"card-img-top\" alt=\"${show.name}\">\n        <div class=\"card-body\">\n          <h5 class=\"card-title\">${show.name}</h5>\n        </div>\n        <div class=\"card-footer d-flex justify-content-between align-items-center\">\n          <button type=\"button\" class=\"btn btn-like d-flex align-items-center gap-2 p-0\"><span class=\"like-count\">0</span></button>\n          <button type=\"button\" class=\"btn btn-info btn-comment\">Comments</button>\n        </div>\n      </div>\n    </div>\n    `;\n  });\n  showContainer.innerHTML = showList;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderShows);\n\n//# sourceURL=webpack://javascriptcapstone/./src/modules/renderShows.js?");
 
 /***/ })
 
