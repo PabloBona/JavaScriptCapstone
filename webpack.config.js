@@ -38,6 +38,10 @@ export default {
         test: /\.jsx?$/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 };
