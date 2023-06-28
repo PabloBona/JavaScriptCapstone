@@ -29,3 +29,7 @@ body {
 .fs-1-extra {
   font-size: 3.5rem;
 }
+
+.bg-light-blue {
+  background-color: #e8ecf3;
+}

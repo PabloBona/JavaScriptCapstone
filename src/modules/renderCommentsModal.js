@@ -12,7 +12,7 @@ export const renderBaseTemplateModal = () => {
           </div>
           <div class="modal-body">
             <div id="container-show-details" class="mb-4"></div>
-            <div id="container-list-comments" class="bg-light rounded"></div>
+            <div id="container-list-comments" class="bg-light-blue rounded"></div>
             <div id="container-add-comments"></div>
           </div>
         </div>
