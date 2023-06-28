@@ -63,14 +63,20 @@ export const renderCommentsList = (comments) => {
   let date;
   let dateFormatted;
 
-  const commentsList = comments.map(({ username, creation_date, comment }) => {
-    date = new Date(creation_date);
-    dateFormatted = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0));
+  const commentsList = comments.map((commentInfo) => {
+    date = new Date(commentInfo.creation_date);
+    dateFormatted = new Date(
+      Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0),
+    );
     return `
     <div class="col-12">
-      <p class="fs-6 comment-details"><b>${dateFormatted.toLocaleDateString('en-US')} ${username}: </b> <span>${comment}</span></p>
+      <p class="fs-6 comment-details">
+        <b>${dateFormatted.toLocaleDateString('en-US')} ${commentInfo.username}: </b> 
+        <span>${commentInfo.comment}</span>
+      </p>
     </div>
-  `}).join('');
+  `;
+  }).join('');
   const commentsContainer = document.getElementById('container-list-comments');
   commentsContainer.innerHTML = `
   <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">Comments (1)</h3>

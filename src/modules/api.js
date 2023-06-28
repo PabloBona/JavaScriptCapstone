@@ -20,7 +20,6 @@ export const getShowDetails = async (id) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error.message);
-    return null;
+    return [];
   }
 };
