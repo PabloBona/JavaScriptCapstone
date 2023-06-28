@@ -14,6 +14,7 @@ const showHideModalEventHandlers = () => {
 
   commentsModal.addEventListener('hide.bs.modal', async () => {
     document.getElementById('container-show-details').innerHTML = '';
+    document.getElementById('container-list-comments').innerHTML = '';
   });
 };
 
