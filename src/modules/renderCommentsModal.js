@@ -78,6 +78,9 @@ export const renderCommentsList = (comments) => {
     <div class="col-md-6">
       <div class="row">
         ${commentsList}
+        <div class="col-12">
+          <p class="fs-6 comment-details"><b>6/28/2023 Carmen: </b> <span>This is a Testing comment</span></p>
+        </div>
       </div>
     </div>
   </div>
