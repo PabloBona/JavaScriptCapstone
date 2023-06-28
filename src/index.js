@@ -3,6 +3,8 @@ import logo from './img/logo.svg';
 import { getShows } from './modules/api.js';
 import renderShows from './modules/renderShows.js';
 import { getLikes } from './modules/involvementApi.js';
+import { renderBaseTemplateModal } from './modules/renderCommentsModal.js';
+import { showHideModalEventHandlers } from './modules/handlerEvents.js';
 
 // add logo to the header
 document.getElementById('logoWebpage').setAttribute('src', logo);
@@ -23,8 +25,9 @@ window.addEventListener('DOMContentLoaded', async () => {
       });
       return show;
     });
-
+    renderBaseTemplateModal();
     renderShows(mergeValues);
+    showHideModalEventHandlers();
   } catch (error) {
     errorMessage.textContent = error.message;
   }
