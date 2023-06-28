@@ -16,3 +16,17 @@ export const getLikes = async () => {
   const likes = await response.json();
   return likes;
 };
+
+export const getShowComments = async (id) => {
+  try {
+    const response = await fetch(`${involveApiUrl}/comments?item_id=${id}`);
+    if (!response.ok) {
+      throw new Error('Failed: This TV Show does not have comments');
+    }
+    const result = await response.json();
+    return Array.isArray(result) ? result : [];
+  } catch (error) {
+    console.log(error.message);
+    return [];
+  }
+};
