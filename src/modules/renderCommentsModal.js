@@ -73,7 +73,7 @@ export const renderCommentsList = (comments) => {
   `}).join('');
   const commentsContainer = document.getElementById('container-list-comments');
   commentsContainer.innerHTML = `
-  <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">Comments (${comments.length})</h3>
+  <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">Comments (1)</h3>
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="row">
