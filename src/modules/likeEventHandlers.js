@@ -3,7 +3,7 @@ import { addLike } from './involvementApi.js';
 export default () => {
   const likeBtns = document.querySelectorAll('.btn-like');
 
-  let isRequestInProgress = false; // Variable para controlar si hay una solicitud en curso
+  let isRequestInProgress = false;
 
   likeBtns.forEach((likeBtn) => {
     likeBtn.addEventListener('click', async (e) => {
