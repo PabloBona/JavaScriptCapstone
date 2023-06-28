@@ -1,6 +1,6 @@
 import './index.css';
 import logo from './img/logo.svg';
-import getShows from './modules/api.js';
+import { getShows } from './modules/api.js';
 import renderShows from './modules/renderShows.js';
 import { getLikes } from './modules/involvementApi.js';
 
