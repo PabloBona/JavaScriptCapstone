@@ -12,7 +12,7 @@ const renderShows = (shows) => {
           <h5 class="card-title">${show.name}</h5>
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
-          <button type="button" class="btn btn-like d-flex align-items-center gap-2 p-0"><span class="like-count">${show.likes}</span></button>
+          <button type="button" class="btn btn-like d-flex align-items-center gap-2 p-0" data-show-id="${show.id}"><span class="like-count" data-likes="${show.likes}">${show.likes}</span></button>
           <button type="button" class="btn btn-info btn-comment" data-index="${show.id}" data-bs-toggle="modal" data-bs-target="#showCommentsPopup">Comments</button>
         </div>
       </div>
