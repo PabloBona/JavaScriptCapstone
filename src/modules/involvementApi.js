@@ -1,5 +1,3 @@
-/* eslint-disable implicit-arrow-linebreak */
-// eslint-disable-next-line operator-linebreak
 const involveApiUrl =
   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/CmqeInWuv4K94K1HgK4U';
 
