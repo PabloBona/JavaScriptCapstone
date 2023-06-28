@@ -22,4 +22,4 @@ export const getShowDetails = async (id) => {
   } catch (error) {
     return null;
   }
-}
+};

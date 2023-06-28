@@ -1,7 +1,7 @@
 export const renderBaseTemplateModal = () => {
   const footerElement = document.querySelector('footer');
   footerElement.insertAdjacentHTML(
-    "afterend",
+    'afterend',
     `<div class="modal fade" id="showCommentsPopup" 
           data-bs-backdrop="static" data-bs-keyboard="false" 
           tabindex="-1" aria-labelledby="showCommentsPopupLabel" aria-hidden="true">
@@ -17,13 +17,15 @@ export const renderBaseTemplateModal = () => {
           </div>
         </div>
       </div>
-    </div>`
+    </div>`,
   );
 };
 
-export const renderShowDetails = ({ name, genres, image, language, premiered, rating, _embedded }) => {
+export const renderShowDetails = ({
+  name, genres, image, language, premiered, rating, _embedded,
+}) => {
   const seasons = _embedded.seasons.length;
-  const premieredFormatted = new Date(premiered).toLocaleDateString('en-us', { year:'numeric', month:'long', day: 'numeric'});
+  const premieredFormatted = new Date(premiered).toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: 'numeric' });
 
   const showDetailsContainer = document.getElementById('container-show-details');
   showDetailsContainer.innerHTML = `
@@ -46,7 +48,7 @@ export const renderShowDetails = ({ name, genres, image, language, premiered, ra
           <p class="fs-5"><b>Rating: </b> <span>${rating.average}</span></p>
         </div>
         <div class="col-md-6">
-          <p class="fs-5"><b>Seasons: </b> <span>${seasons} season${seasons !== 1 ? 's': ''}</span></p>
+          <p class="fs-5"><b>Seasons: </b> <span>${seasons} season${seasons !== 1 ? 's' : ''}</span></p>
         </div>
         <div class="col-md-12">
           <p class="fs-5"><b>Genres: </b> <span>${genres.join(' | ')}</span></p>
