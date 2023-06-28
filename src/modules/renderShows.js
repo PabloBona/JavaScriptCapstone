@@ -13,7 +13,7 @@ const renderShows = (shows) => {
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
           <button type="button" class="btn btn-like d-flex align-items-center gap-2 p-0"><span class="like-count">${show.likes}</span></button>
-          <button type="button" class="btn btn-info btn-comment">Comments</button>
+          <button type="button" class="btn btn-info btn-comment" data-index="${show.id}" data-bs-toggle="modal" data-bs-target="#showCommentsPopup">Comments</button>
         </div>
       </div>
     </div>
