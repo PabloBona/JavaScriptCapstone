@@ -11,8 +11,8 @@ export const renderBaseTemplateModal = () => {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div id="container-show-details"></div>
-            <div id="container-list-comments"></div>
+            <div id="container-show-details" class="mb-4"></div>
+            <div id="container-list-comments" class="bg-light rounded"></div>
             <div id="container-add-comments"></div>
           </div>
         </div>
@@ -53,6 +53,31 @@ export const renderShowDetails = ({
         <div class="col-md-12">
           <p class="fs-5"><b>Genres: </b> <span>${genres.join(' | ')}</span></p>
         </div>
+      </div>
+    </div>
+  </div>
+  `;
+};
+
+export const renderCommentsList = (comments) => {
+  let date;
+  let dateFormatted;
+
+  const commentsList = comments.map(({ username, creation_date, comment }) => {
+    date = new Date(creation_date);
+    dateFormatted = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0));
+    return `
+    <div class="col-12">
+      <p class="fs-6 comment-details"><b>${dateFormatted.toLocaleDateString('en-US')} ${username}: </b> <span>${comment}</span></p>
+    </div>
+  `}).join('');
+  const commentsContainer = document.getElementById('container-list-comments');
+  commentsContainer.innerHTML = `
+  <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">Comments (${comments.length})</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="row">
+        ${commentsList}
       </div>
     </div>
   </div>
