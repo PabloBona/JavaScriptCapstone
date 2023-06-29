@@ -11,12 +11,13 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 JavaScrip-Capstone ](#-JavaScrip-Capstone-)
+- [📖 SeriesFeedback (JavaScrip-Capstone)](#JavaScrip-Capstone)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [💻 Getting Started ](#-getting-started-)
+  - [🚀 Live Demo ](#live-demo)
+  - [🔭 Walk through video](#walk-through-video)
+  - [💻 Getting Started ](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -33,7 +34,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 SeriesFeedback (JavaScrip-Capstone) <a name="SeriesFeedback (JavaScrip Capstone)"></a>
+# 📖 SeriesFeedback (JavaScrip-Capstone) <a name="JavaScrip-Capstone"></a>
 
 <spam style="color:rgb(87, 247, 255)"><spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam></spam> is an interactive website that provides a platform for users to engage in discussions and share their feedback on a wide range of TV shows. Whether you're a fan of captivating classics or enjoy exploring innovative creations, <spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam> offers a diverse collection of films and shows for you to explore.
 
@@ -43,10 +44,14 @@ Join our community of film enthusiasts, and immerse yourself in conversations ab
 
 Experience the joy of voicing your impressions and being part of a vibrant community of TV show enthusiasts on <spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam>. Start exploring now and let your opinions be heard!
 
- 
 <br>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🛠 Built With <a name="built-with"></a>
+
 ### Tech Stack <a name="tech-stack"></a>
-<br>
+
 The following stacks were used
 
 <details style="color:rgb(87, 247, 255);">
@@ -59,8 +64,9 @@ The following stacks were used
 </details>
 
 <!-- Features -->
-<br>
-## Key Features <a name="key-features"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Key Features <a name="key-features"></a>
 
 - TV Show Listings: The home page of SeriesFeedback presents users with an extensive catalog of TV shows. Users can effortlessly browse through the available shows and discover new content to explore.
 
@@ -74,7 +80,7 @@ The following stacks were used
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo
+## 🚀 Live Demo <a name="live-demo"></a>
 
 <a href="https://pablobona.github.io/JavaScriptCapstone/dist/index.html">Live Demo</a>
 
@@ -82,7 +88,7 @@ The following stacks were used
 
 <!-- GETTING STARTED -->
 
-## 🔭 Walk through video
+## 🔭 Walk through video <a name="walk-through-video"></a>
 
 <a href="https://drive.google.com/file/d/1PyLQ5o93Hjioglf9RmWgMXKxZ03r7Mis/view?usp=sharing">Here</a>
 
