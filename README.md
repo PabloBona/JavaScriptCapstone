@@ -182,7 +182,8 @@ If you like this project you can follow me on github for more.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to express our gratitude to the creators and maintainers of the MazeTv and Microverse Involvement APIs for their invaluable contributions. Their APIs have significantly enhanced the functionality of SeriesFeedback, allowing users to engage with TV shows and share their feedback seamlessly.
+- We would like to express our gratitude to the creators and maintainers of the MazeTv and Microverse Involvement APIs for their invaluable contributions.
+- We would like to express our heartfelt gratitude to Microvere for the invaluable learning experience they have provided. The supportive community, dedicated mentors, and remote collaboration opportunities have enhanced my technical skills and prepared me for real-world projects.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
