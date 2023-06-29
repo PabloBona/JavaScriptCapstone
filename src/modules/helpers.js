@@ -25,3 +25,8 @@ export const getPremieredDateFormatted = (originalDate) => {
   });
   return premieredFormatted;
 }
+
+export const getSeasonsTextFormatted = (seasons) => {
+  const numberSeasons = seasons.length;
+  return `${numberSeasons} season${numberSeasons !== 1 ? 's' : ''}`;
+}
