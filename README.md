@@ -2,7 +2,7 @@
 
 <div align="center">
  <br/>
- <h1 style="color: green;">Welcome to Our JavaScript Capstone Project</h1>
+ <h1 style="color:rgb(87, 247, 255);border: 3px solid rgb(87, 247, 255);">SeriesFeedback</h1>
  <br/>
 </div>
 
@@ -33,21 +33,28 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 JavaScrip-Capstone <a name="JavaScrip-Capstone"></a>
+# 📖 SeriesFeedback (JavaScrip-Capstone) <a name="SeriesFeedback (JavaScrip Capstone)"></a>
 
-The website REVIEWFLIX is your ultimate platform for expressing your opinions on movies and TV series. Explore a wide variety of films and shows, from captivating classics to innovative creations, and share your thoughts with the world. Give us your feedback, comment, and engage with fellow film enthusiasts as you discover new genres and embark on visual adventures. Experience the joy of voicing your impressions on Reviewflix, where every movie and series becomes a conversation.
+<spam style="color:rgb(87, 247, 255)"><spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam></spam> is an interactive website that provides a platform for users to engage in discussions and share their feedback on a wide range of TV shows. Whether you're a fan of captivating classics or enjoy exploring innovative creations, <spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam> offers a diverse collection of films and shows for you to explore.
 
-## 🛠 Built With <a name="built-with"></a>
+With the integration of two powerful external APIs, MazeTv and the Microverse Involvement API, <spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam> ensures a seamless experience when it comes to fetching, displaying, and interacting with TV series. You can easily discover new genres, embark on visual adventures, and express your thoughts and opinions.
 
+Join our community of film enthusiasts, and immerse yourself in conversations about your favorite shows. Share your feedback, leave comments, and connect with fellow users who share your passion for the silver screen. At <spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam>, every movie and series becomes an opportunity for engaging discussions and exciting conversations.
+
+Experience the joy of voicing your impressions and being part of a vibrant community of TV show enthusiasts on <spam style="color:rgb(87, 247, 255)">SeriesFeedback</spam>. Start exploring now and let your opinions be heard!
+
+ 
+<br>
 ### Tech Stack <a name="tech-stack"></a>
-
+<br>
 The following stacks were used
 
-<details>
+<details style="color:rgb(87, 247, 255);">
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
  </ul>
 </details>
 
@@ -55,10 +62,13 @@ The following stacks were used
 <br>
 ## Key Features <a name="key-features"></a>
 
-- User-friendly and intuitive interface
-- Attractive and visually pleasing design
-- Fast content loading
-- User comments and ratings
+- TV Show Listings: The home page of SeriesFeedback presents users with an extensive catalog of TV shows. Users can effortlessly browse through the available shows and discover new content to explore.
+
+- Likes and Interactions: To express their appreciation for a TV show, users can simply click on the heart icon button associated with each show. This functionality is seamlessly integrated, allowing users to easily indicate their preference.
+
+- Commenting System: SeriesFeedback provides a convenient pop-up window or modal where users can leave comments about their favorite TV shows. This interactive feature allows for lively discussions and encourages users to share their thoughts.
+
+- Counters: To enhance the user experience, SeriesFeedback incorporates counters that dynamically track important metrics. These counters keep a real-time tally of the number of shows displayed on the home page and the total number of comments in the pop-up window.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,9 +145,9 @@ You can deploy this project using: GitHub Pages
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Awesome Design**
+- [ ] **Pagination**
 - [ ] **Integration with popular streaming services**
-- [ ] **Customizable notifications and alertsn**
+- [ ] **Customizable notifications and alerts**
 - [ ] **Multilingual support**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
