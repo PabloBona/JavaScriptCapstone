@@ -3,6 +3,7 @@ import {
   renderShowDetails, renderCommentsList, renderCommentsForm,
 } from './renderCommentsModal.js';
 import { getShowComments, saveNewComment } from './involvementApi.js';
+import commentsCounter from './commentsCounter.js';
 
 const AddCommentEventHandler = () => {
   const formAddComment = document.getElementById('add-comment-form');
@@ -24,6 +25,7 @@ const AddCommentEventHandler = () => {
     if (saveCommentResult) {
       const showCommentsList = await getShowComments(showId);
       renderCommentsList(showCommentsList);
+      commentsCounter();
     } else {
       const errorContainer = document.getElementById('add-comment-error');
       errorContainer.textContent = 'Error! Comment not saved. Refresh the page and Try again.';
@@ -43,6 +45,7 @@ const showHideModalEventHandlers = () => {
     renderShowDetails(showDetails);
     renderCommentsList(showCommentsList);
     renderCommentsForm(showId);
+    commentsCounter();
     AddCommentEventHandler();
   });
 

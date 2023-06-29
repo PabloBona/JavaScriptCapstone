@@ -76,7 +76,7 @@ export const renderCommentsList = (comments) => {
 
   commentsContainer.innerHTML = `
   <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">
-    Comments (<span id="commentsCount" data-counter="1">1</span>)
+    Comments (<span id="commentsCount"></span>)
   </h3>
   <div class="row justify-content-center">
     <div class="col-md-6">
