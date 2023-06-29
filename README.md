@@ -82,6 +82,14 @@ The following stacks were used
 
 <!-- GETTING STARTED -->
 
+## 🔭 Walk through video
+
+<a href="#">SOON</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ### Prerequisites
@@ -174,7 +182,7 @@ If you like this project you can follow me on github for more.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Soon
+We would like to express our gratitude to the creators and maintainers of the MazeTv and Microverse Involvement APIs for their invaluable contributions. Their APIs have significantly enhanced the functionality of SeriesFeedback, allowing users to engage with TV shows and share their feedback seamlessly.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
