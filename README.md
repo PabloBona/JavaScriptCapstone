@@ -84,7 +84,7 @@ The following stacks were used
 
 ## 🔭 Walk through video
 
-<a href="https://drive.google.com/file/d/12cKOcF_OD3-GsHw_9Oc7zC56IO6c91xh/view?usp=sharing">Here</a>
+<a href="https://drive.google.com/file/d/1PyLQ5o93Hjioglf9RmWgMXKxZ03r7Mis/view?usp=sharing">Here</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
