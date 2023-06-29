@@ -1,11 +1,13 @@
-import { commentItemMarkup, getCommentDateFormatted, 
-  getPremieredDateFormatted, getSeasonsTextFormatted } 
+import {
+  commentItemMarkup, getCommentDateFormatted,
+  getPremieredDateFormatted, getSeasonsTextFormatted,
+}
 from './helpers.js';
 
 export const renderBaseTemplateModal = () => {
-  const footerElement = document.querySelector("footer");
+  const footerElement = document.querySelector('footer');
   footerElement.insertAdjacentHTML(
-    "afterend",
+    'afterend',
     `<div class="modal fade" id="showCommentsPopup" 
           data-bs-backdrop="static" data-bs-keyboard="false" 
           tabindex="-1" aria-labelledby="showCommentsPopupLabel" aria-hidden="true">
@@ -23,16 +25,14 @@ export const renderBaseTemplateModal = () => {
           </div>
         </div>
       </div>
-    </div>`
+    </div>`,
   );
 };
-
 
 export const renderShowDetails = ({
   name, genres, image, language, premiered, rating, _embedded,
 }) => {
-
-  const seasons = getSeasonsTextFormatted( _embedded.seasons);
+  const seasons = getSeasonsTextFormatted(_embedded.seasons);
   const premieredDate = getPremieredDateFormatted(premiered);
   const showDetailsContainer = document.getElementById('container-show-details');
 
@@ -68,12 +68,11 @@ export const renderShowDetails = ({
 };
 
 export const renderCommentsList = (comments) => {
+  const commentsList = comments.map((comment) => commentItemMarkup(
+    getCommentDateFormatted(comment.creation_date), comment.username, comment.comment,
+  )).join('');
 
-  const commentsList = comments.map(({creation_date, username, comment}) => {
-    return commentItemMarkup(getCommentDateFormatted(creation_date), username, comment)
-  }).join('');
-
-  const commentsContainer = document.getElementById("container-list-comments");
+  const commentsContainer = document.getElementById('container-list-comments');
 
   commentsContainer.innerHTML = `
   <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">
@@ -91,7 +90,7 @@ export const renderCommentsList = (comments) => {
 
 export const renderCommentsForm = (id) => {
   const commentsFormContainer = document.getElementById(
-    "container-add-comments"
+    'container-add-comments',
   );
   commentsFormContainer.innerHTML = `
   <h3 class="modal-comments-form-title fs-2 py-4 text-center fw-bolder">Add a comment</h3>

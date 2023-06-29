@@ -37,7 +37,7 @@ export const saveNewComment = async (commentData) => {
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
       },
-      body: JSON.stringify(commentData)
+      body: JSON.stringify(commentData),
     };
 
     const response = await fetch(`${involveApiUrl}/comments`, requestOptions);
@@ -49,7 +49,6 @@ export const saveNewComment = async (commentData) => {
     const result = await response.text();
 
     return result;
-    
   } catch (error) {
     return null;
   }
