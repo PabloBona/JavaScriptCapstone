@@ -1,8 +1,7 @@
-import { afterEach } from 'node:test';
 import commentsCounter from '../modules/commentsCounter.js';
 
 describe('Function commentsCounter', () => {
-  const commentItem = `<p class="fs-6 comment-item">Comment!</p>`;
+  const commentItem = '<p class="fs-6 comment-item">Comment!</p>';
   beforeEach(() => {
     document.body.innerHTML = `
     <h3>Comments (<span id="commentsCount"></span>)</h3>
@@ -28,7 +27,7 @@ describe('Function commentsCounter', () => {
   test('Calculate and display 3 when there is 3 comments displayed', () => {
     // Arrange
     const threeComments = Array(3).fill(commentItem);
-    document.getElementById('comments-list').innerHTML = `${threeComments.join('')}`; 
+    document.getElementById('comments-list').innerHTML = `${threeComments.join('')}`;
     const commentsCount = document.getElementById('commentsCount');
 
     // Act
@@ -40,8 +39,8 @@ describe('Function commentsCounter', () => {
 
   test('Calculate and display 10 when there is 10 comments displayed', () => {
     // Arrange
-    const tenComments = Array(10).fill(commentItem); 
-    document.getElementById('comments-list').innerHTML = `${tenComments.join('')}`; 
+    const tenComments = Array(10).fill(commentItem);
+    document.getElementById('comments-list').innerHTML = `${tenComments.join('')}`;
     const commentsCount = document.getElementById('commentsCount');
 
     // Act
