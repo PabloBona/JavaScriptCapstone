@@ -1,7 +1,11 @@
+import { commentItemMarkup, getCommentDateFormatted, 
+  getPremieredDateFormatted, getSeasonsTextFormatted } 
+from './helpers.js';
+
 export const renderBaseTemplateModal = () => {
-  const footerElement = document.querySelector('footer');
+  const footerElement = document.querySelector("footer");
   footerElement.insertAdjacentHTML(
-    'afterend',
+    "afterend",
     `<div class="modal fade" id="showCommentsPopup" 
           data-bs-backdrop="static" data-bs-keyboard="false" 
           tabindex="-1" aria-labelledby="showCommentsPopupLabel" aria-hidden="true">
@@ -12,22 +16,26 @@ export const renderBaseTemplateModal = () => {
           </div>
           <div class="modal-body">
             <div id="container-show-details" class="mb-4"></div>
-            <div id="container-list-comments" class="bg-light-blue rounded"></div>
-            <div id="container-add-comments"></div>
+            <div class="bg-light-blue rounded px-4">
+              <div id="container-list-comments"></div>
+              <div id="container-add-comments"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>`,
+    </div>`
   );
 };
+
 
 export const renderShowDetails = ({
   name, genres, image, language, premiered, rating, _embedded,
 }) => {
-  const seasons = _embedded.seasons.length;
-  const premieredFormatted = new Date(premiered).toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: 'numeric' });
 
+  const seasons = getSeasonsTextFormatted( _embedded.seasons);
+  const premieredDate = getPremieredDateFormatted(premiered);
   const showDetailsContainer = document.getElementById('container-show-details');
+
   showDetailsContainer.innerHTML = `
   <div class="row justify-content-center align-items-center">
     <div class="col-12 d-flex justify-content-center align-items-center">
@@ -42,13 +50,13 @@ export const renderShowDetails = ({
           <p class="fs-5"><b>Language: </b> <span>${language}</span></p>
         </div>
         <div class="col-md-6">
-          <p class="fs-5"><b>Premiered: </b> <span>${premieredFormatted}</span></p>
+          <p class="fs-5"><b>Premiered: </b> <span>${premieredDate}</span></p>
         </div>
         <div class="col-md-6">
           <p class="fs-5"><b>Rating: </b> <span>${rating.average}</span></p>
         </div>
         <div class="col-md-6">
-          <p class="fs-5"><b>Seasons: </b> <span>${seasons} season${seasons !== 1 ? 's' : ''}</span></p>
+          <p class="fs-5"><b>Seasons: </b> <span>${seasons}</span></p>
         </div>
         <div class="col-md-12">
           <p class="fs-5"><b>Genres: </b> <span>${genres.join(' | ')}</span></p>
@@ -60,33 +68,21 @@ export const renderShowDetails = ({
 };
 
 export const renderCommentsList = (comments) => {
-  let date;
-  let dateFormatted;
 
-  const commentsList = comments.map((commentInfo) => {
-    date = new Date(commentInfo.creation_date);
-    dateFormatted = new Date(
-      Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0),
-    );
-    return `
-    <div class="col-12">
-      <p class="fs-6 comment-details">
-        <b>${dateFormatted.toLocaleDateString('en-US')} ${commentInfo.username}: </b> 
-        <span>${commentInfo.comment}</span>
-      </p>
-    </div>
-  `;
+  const commentsList = comments.map(({creation_date, username, comment}) => {
+    return commentItemMarkup(getCommentDateFormatted(creation_date), username, comment)
   }).join('');
-  const commentsContainer = document.getElementById('container-list-comments');
+
+  const commentsContainer = document.getElementById("container-list-comments");
+
   commentsContainer.innerHTML = `
-  <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">Comments (1)</h3>
+  <h3 class="modal-comments-title fs-2 py-4 text-center fw-bolder">
+    Comments (<span id="commentsCount" data-counter="1">1</span>)
+  </h3>
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <div class="row">
+      <div class="row" id="comments-list">
         ${commentsList}
-        <div class="col-12">
-          <p class="fs-6 comment-details"><b>6/28/2023 Carmen: </b> <span>This is a Testing comment</span></p>
-        </div>
       </div>
     </div>
   </div>
