@@ -16,3 +16,12 @@ export const getCommentDateFormatted = (originalDate) => {
   );
   return dateFormatted.toLocaleDateString("en-US");
 }
+
+export const getPremieredDateFormatted = (originalDate) => {
+  const premieredFormatted = new Date(originalDate).toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  return premieredFormatted;
+}
