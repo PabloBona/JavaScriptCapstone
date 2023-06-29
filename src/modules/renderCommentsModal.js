@@ -88,3 +88,28 @@ export const renderCommentsList = (comments) => {
   </div>
   `;
 };
+
+export const renderCommentsForm = (id) => {
+  const commentsFormContainer = document.getElementById(
+    "container-add-comments"
+  );
+  commentsFormContainer.innerHTML = `
+  <h3 class="modal-comments-form-title fs-2 py-4 text-center fw-bolder">Add a comment</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form action="#" id="add-comment-form" data-show="${id}">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="inputUsername" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="inputComment" rows="3" placeholder="Your insights" required></textarea>
+        </div>
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+          <button type="submit" class="btn btn-info mb-3 fs-5">Comment</button>
+          <p id="add-comment-error" class="fs-4 mb-3 fw-bold text-bg-danger"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  `;
+};
