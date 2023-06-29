@@ -4,6 +4,7 @@ import {
 } from './renderCommentsModal.js';
 import { getShowComments, saveNewComment } from './involvementApi.js';
 import commentsCounter from './commentsCounter.js';
+
 const AddCommentEventHandler = () => {
   const formAddComment = document.getElementById('add-comment-form');
   formAddComment.addEventListener('submit', async (e) => {
