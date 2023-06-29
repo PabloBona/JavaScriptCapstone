@@ -12,7 +12,7 @@ export default () => {
       const likeCount = parseInt(countElem.dataset.likes, 10);
       const errorElem = document.querySelector('.error-message');
 
-      if (!hasLiked) {
+      if (!hasLiked && !e.target.classList.contains('liked')) {
         try {
           hasLiked = true;
           await addLike(parseInt(showId, 10));
@@ -20,6 +20,8 @@ export default () => {
           countElem.textContent = likeCount + 1;
         } catch (error) {
           errorElem.textContent = 'Failed to add like';
+          hasLiked = false;
+        } finally {
           hasLiked = false;
         }
       }
