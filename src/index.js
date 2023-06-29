@@ -6,6 +6,7 @@ import { getLikes } from './modules/involvementApi.js';
 import { renderBaseTemplateModal } from './modules/renderCommentsModal.js';
 import showHideModalEventHandlers from './modules/handlerEvents.js';
 import likeEventHandlers from './modules/likeEventHandlers.js';
+import showCounter from './modules/showCounter.js';
 
 // add logo to the header
 document.getElementById('logoWebpage').setAttribute('src', logo);
@@ -30,6 +31,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     renderShows(mergeValues);
     showHideModalEventHandlers();
     likeEventHandlers();
+    showCounter();
   } catch (error) {
     errorMessage.textContent = error.message;
   }
