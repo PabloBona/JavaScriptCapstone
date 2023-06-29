@@ -106,8 +106,8 @@ export const renderCommentsForm = (id) => {
         </div>
         <div class="mb-3 d-flex justify-content-between align-items-center">
           <button type="submit" class="btn btn-info mb-3 fs-5">Comment</button>
-          <p id="add-comment-error" class="fs-4 mb-3 fw-bold text-bg-danger"></p>
         </div>
+        <p id="add-comment-error" class="mb-3 fw-bold text-danger fs-6"></p>
       </form>
     </div>
   </div>
