@@ -29,3 +29,27 @@ export const getShowComments = async (id) => {
     return [];
   }
 };
+
+export const saveNewComment = async (commentData) => {
+  try {
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify(commentData),
+    };
+
+    const response = await fetch(`${involveApiUrl}/comments`, requestOptions);
+
+    if (!response.ok) {
+      throw new Error('Failed: There is a fatal error in the request');
+    }
+
+    const result = await response.text();
+
+    return result;
+  } catch (error) {
+    return null;
+  }
+};
